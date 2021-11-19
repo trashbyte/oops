@@ -1,0 +1,25 @@
+name: Oops
+description: Clean workflow runs after an `--amend`
+author: trashbyte
+
+inputs:
+  token:
+    description: 'The token used to authenticate.'
+    required: true
+
+  repository:
+    description: 'The name of the repository.'
+    required: true
+
+  branch:
+    description: 'The branch to check.'
+    required: true
+    default: master
+
+runs:
+  using: 'node12'
+  main: 'dist/index.js'
+
+branding:
+  icon: 'check-circle'
+  color: 'green'
